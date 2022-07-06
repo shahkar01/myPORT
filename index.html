@@ -12,6 +12,9 @@
     <!-- SWIPER CSS  -->
     <link rel="stylesheet" href="css/swiper-bundle.min.css">
 
+<!-- Link Swiper's CSS -->
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"
+/>
     <!-- CSS  -->
     <link href="css\style.css" rel="stylesheet">
 
@@ -48,7 +51,7 @@
                             </a>
                         </li>
                         <li class="nav__item">
-                            <a href="#Services" class="nav__link">
+                            <a href="#services" class="nav__link">
                                 <i class="uil uil-briefcase-alt nav__icon"></i>Services
                             </a>
                         </li>
@@ -58,7 +61,7 @@
                             </a>
                         </li>
                         <li class="nav__item">
-                            <a href="#contactme" class="nav__link">
+                            <a href="#contact   " class="nav__link">
                                 <i class="uil uil-message nav__icon"></i>ContactMe
                             </a>
                         </li>
@@ -85,7 +88,7 @@
             <div classs="home__container container grid">
                 <div class="home__content grid">
                     <div class="home__social">
-                        <a href="https://www.linkedin.com/" target="blank" class="home__social-icon">
+                        <a href="https://www.linkedin.com/"  class="home__social-icon">
                             <i class="uil uil-link-alt"></i>
                         </a>
                         <a href="https://dribbble.com/" target="blank" class="home__social-icon">
@@ -172,8 +175,9 @@
                 </div> -->
                     </div>
                     <div class="about__buttons">
-                        <a download="" href="pdf\myCV.pdf" class="button button--flex"></a>
+                        <a download="" href="pdf\myCV.pdf" class="button button--flex">
                         Download CV<i class="uil uil-download-alt button__icon"></i>
+                    </a>
                     </div>
                 </div>
             </div>
@@ -182,10 +186,10 @@
         <section class="skills section" id="skills">
             <h2 class="section__title">Skills</h2>
             <span class="section__subtitle">My Technical Level</span>
-            <div class="skills__container grid">
+            <div class="skills__container container grid">
                 <div>
                     <!-- skills 1 -->
-                    <div class="skills__content skills__open">
+                    <div class="skills__content skills__close">
                         <div class="skills__header">
                             <i class="uil uil-brackets-curly skills__icon"></i>
 
@@ -519,7 +523,7 @@
             <h2 class="section__title">Services</h2>
             <span class="section__subtitle">What I Offer</span>
 
-            <div class="services__container container grid"></div>
+            <div class="services__container container grid">
             <!-- SERVICE 1 -->
             <div class="services__content">
                 <div>
@@ -639,8 +643,11 @@
             <h2 class="section__title">Portfolio</h2>
             <span class="section__subtitle">Most Recent Work</span>
 
-            <div class="portfolio__container container swiper-container">
+            <div class="portfolio__container container swiper mySwiper">
                 <div class="swiper-wrapper">
+
+                 
+            
                     <!-- PORTFOLIO 1 -->
                     <div class="portfolio__content grid swiper-slide">
                         <img src="img\portfolio1.jpg" alt="" class="portfolio__img">
@@ -685,25 +692,31 @@
                             </a>
 
                         </div>
+
+                       
+                
                     </div>
                 </div>
-                <!-- Add Arrows -->
-                <div class="swiper-button-next">
-                    <i class="uil uil-angle-right-b swiper-portfolio-icon"></i>
-                </div>
-                <div class="swiper-button-prev">
-                    <i class="uil uil-angle-left-b swiper-portfolio-icon"></i>
-                </div>
-                <!-- Add Pagination -->
-                <div class="swiper-pagination"></div>
+                
+            <!-- Add Arrows -->
+            <div class="swiper-button-prev">
+                <i class="uil uil-angle-left-b swiper-portfolio-icon"></i>
+            </div>
+            <div class="swiper-button-next">
+                <i class="uil uil-angle-right-b swiper-portfolio-icon"></i>
             </div>
 
+
+                <!-- Add Pagination -->
+                <div class="swiper-pagination-portfolio"></div>
+            </div>
+             
         </section>
 
         <!-- PROJECT  IN MIND  -->
         <section class="project section">
             <div class="project__bg">
-                <div class="project__container container grid"></div>
+                <div class="project__container container grid">
                 <div class="project__data">
                     <h2 class="project__title">You have a new project ?</h2>
                     <p class="project__description">Contact me now and
@@ -714,7 +727,7 @@
                         <i class="uil uil-message project__icon button__icon"></i>
                     </a>
                 </div>
-
+            </div>
                 <img src="img\shahkar.jpg" alt="" class="project__img">
             </div>
         </section>
@@ -725,7 +738,7 @@
             <h2 class="section__title">Testimonial</h2>
             <span class="section__subtitle">My client saying</span>
 
-            <div class="testimonial__container container swiper-container">
+            <div class="testimonial__container container swiper mySwiper">
                 <div class="swiper-wrapper">
                     <!-- TESTIMONIAL 1  -->
                     <div class="testimonial__content swiper-slide">
@@ -803,8 +816,17 @@
                             and support 24 hours a day.</p>
                     </div>
                 </div>
+
+                 <!-- Add Arrows -->
+            <div class="swiper-button-prev">
+                <i class="uil uil-angle-left-b swiper-portfolio-icon"></i>
+            </div>
+            <div class="swiper-button-next">
+                <i class="uil uil-angle-right-b swiper-portfolio-icon"></i>
+            </div>
+
                 <!-- Add Pagination  -->
-                <div class="swiper-pagination swiper-pagination-testimonial"></div>
+                <div class="swiper-pagination-testimonial"></div>
             </div>
         </section>
       
@@ -918,6 +940,10 @@
     </a>
 
     <!-- SWIPER JS  -->
+<!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+
     <script src="js\swiper-bundle.min.js"></script>
 
     <script src="js\main.js"></script>
