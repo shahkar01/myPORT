@@ -29,7 +29,7 @@ navLink.forEach(n => n.addEventListener('click', linkAction))
 
 // ACCORDION SKILLS
 const skillsContent = document.getElementsByClassName('skills__content')
-      skillsHeader = document.querySelectorAll('skills__header')
+      skillsHeader = document.querySelectorAll('.skills__header')
 
 function toggleSkills(){
     let itemClass = this.parentNode.className
@@ -57,21 +57,21 @@ tabs.forEach(tab =>{
 
         tabContents.forEach(tabContent =>{
             tabContent.classList.remove('qualification__active')
-        })
+        }),
         target.classList.add('qualification__active')
 
         tabs.forEach(tab=>{
             tab.classList.remove('qualification__active')
-        })
+        }),
         tab.classList.add('qualification__active')
     })
 })    
 
 // SERVICES MODAL
 
-const modalViews = document.querySelectorAll('services__modal')
-      modalBtns = document.querySelectorAll('services__button')
-      modalCloses = document.querySelectorAll('services__modal-close')
+const modalViews = document.querySelectorAll('.services__modal')
+      modalBtns = document.querySelectorAll('.services__button')
+      modalCloses = document.querySelectorAll('.services__modal-close')
 
 let modal = function(modalClick){
     modalViews[modalClick].classList.add('active-modal')
@@ -97,33 +97,66 @@ modalCloses.forEach((modalClose) => {
 let swiperPortfolio = new Swiper(".portfolio__container", {
     cssMode: true,
     loop: true,
+    grabCursor: true,   
     navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
     },
     pagination: {
-      el: ".swiper-pagination",
+      el: '.swiper-pagination-portfolio',
       clickable: true,
     },  
+    
   });
+
+
+  
+  var swiper = new Swiper(".mySwiper", {
+    pagination: {
+      el: ".swiper-pagination",
+      dynamicBullets: true,
+      
+    },
+  });
+
 
 // TESTIMONIAL
 let swiperTestimonial = new Swiper(".testimonial__container", {
-    loop: true,
+    loop: false,
+    cssMode: true,
     grabCursor: true,
-    spaceBetween: 48,
+    spaceBetween: 23,
+
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
     
     pagination: {
-      el: ".swiper-pagination",
+      el: ".swiper-pagination-testimonial",
       clickable: true,
       dynamicBullets: true,
-    },  
+    },
     breakpoints:{
         568:{
-            slidesPerView: 2,
+            slidesPerView: 1,
         }
     }
   });
+
+//   var swiper = new Swiper(".mySwiper", {
+//     loop: true,
+//     navigation: {
+//         nextEl: '.swiper-button-next',
+//         prevEl: '.swiper-button-prev',
+//       },
+//     pagination: {
+//       el: ".swiper-pagination-testimonial",
+//       dynamicBullets: true,
+//       clickable: true,
+//     },
+//   });
+
 
 
 // SCROLL SECTIONS ACTIVE LINK
